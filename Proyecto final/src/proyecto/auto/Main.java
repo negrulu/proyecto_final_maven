@@ -67,6 +67,7 @@ public class Main {
 					String placa = entradaCaracter.nextLine();
 					System.out.println("Ahora ingrese su cedula: ");
 					String cedula = entradaCaracter.nextLine();
+					cedula1.setCedula(cedula);
 					for (int i = 0; i < autos.length; i++) {
 						Auto consultaAuto = autos[i];
 						boolean buscar = consultaAuto.getPlaca().equals(placa);
@@ -79,8 +80,6 @@ public class Main {
 								consultaAuto.setFechaEntrega(fechaEntrega);
 								
 								System.out.println(fechaHoy.format(DateTimeFormatter.ofPattern("dd MMMM yyyy")));
-								
-								cedula1.setCedula(cedula);
 								System.out.println(autos[i].getFechaEntrega());
 								System.out.println("El auto ha sido correctamente reservado");
 								
